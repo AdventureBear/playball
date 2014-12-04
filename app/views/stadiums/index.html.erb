@@ -1,0 +1,48 @@
+
+<h1><%= pluralize(@stadiums.size, "Stadium") %></h1>
+<ul id="stadiums">
+  <% @stadiums.each do |stadium| %>
+    <li>
+      <article class="stadium" id="<%= dom_id(stadium) %>">
+
+      	<header>
+          <%= image_for(stadium) %>
+          <h2><%= link_to(stadium.name, stadium) %></h2> 
+          <em><%= stadium.city%>, <%= stadium.state %></em>
+        </header>
+
+        <table>
+        	<tr>
+        		<th>Opened</th>
+        		<td><%= stadium.opening %></td>
+        	</tr>
+          <tr>
+            <th>Closed</th>
+            <td><%= stadium.closing %> 
+          </tr>
+        	<tr>
+         	  <th>Team name</th>
+            <td><%= stadium.teamname %></td>
+          </tr>
+
+          <tr>
+            <th>Affiliate</th>
+            <td><%= stadium.affiliate %></td>
+          </tr>
+          <tr>
+            <th>Center Field</th>
+            <td><%= stadium.centerfieldft %> feet at Center Field</td>
+          </tr>
+          <tr>
+            <th>Website</th>
+            <td><%= stadium.website %> </td>
+          </tr>
+        </table>
+
+      </article>
+    </li>
+  <% end %>
+</ul>
+
+
+

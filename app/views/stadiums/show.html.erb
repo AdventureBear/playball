@@ -1,0 +1,49 @@
+<article id="stadium" class="stadium">
+  <header>
+    <%= image_for(@stadium)  %>
+    <h1><%= @stadium.name %></h1>
+  </header>
+
+  <h2>Location</h2>
+  <p>
+    <%= @stadium.city %>, <%= @stadium.state %>
+  </p>
+
+  <h3>Average Review</h3>
+  <p><%= format_average_stars(@stadium) %>
+  </p>
+  
+  <h3>Opened</h3>
+  <p>
+    <%= @stadium.opening %>
+  </p>
+  <h3>Closed</h3>
+  <p>
+    <%= @stadium.closing %>
+  </p>
+  <h3>Team Name</h3>
+  <p>
+    <%= @stadium.teamname %>
+  </p>
+  <h3>Center Field, ft</h3>
+  <p>
+    <%= @stadium.centerfieldft %>
+  </p>
+  <h3>Affiliate</h3>
+  <p>
+    <%= @stadium.affiliate %>
+  </p>
+    <h3>League</h3>
+  <p>
+    <%= @stadium.league %>
+  </p>
+  <footer>
+    <nav>
+      <%= link_to  "Write Review", new_stadium_review_path(@stadium), class: 'button ok review' %>
+      <%= link_to  "Edit", edit_stadium_path(@stadium), class: 'button' %> 
+      <%= link_to  "Delete", @stadium, 
+                    class: 'button',
+                    method: :delete, data: { confirm: 'Are you sure?' } %> 
+    </nav>
+  </footer> 
+</article>

@@ -1,0 +1,31 @@
+<article id="review" class="review">
+  <header>
+    <%= image_for(@stadium)  %>
+    <h1><%= @stadium.name %></h1>
+  </header>
+
+ 
+  <h3>Name</h3>
+  <p>
+    <%= @review.name %>
+  </p>
+  <h3>Stars</h3>
+  <p>
+    <%= @review.stars %>
+  </p>
+  <h3>Comment</h3>
+  <p>
+    <%= @review.comment %>
+  </p>
+  
+
+  <footer>
+    <nav>
+      
+      <%#= link_to  "Edit", edit_stadium_path(@stadium), class: 'button' %> 
+      <%#= link_to  "Delete", @stadium, 
+                    class: 'button',
+                    method: :delete, data: { confirm: 'Are you sure?' } %> 
+    </nav>
+  </footer> 
+</article>

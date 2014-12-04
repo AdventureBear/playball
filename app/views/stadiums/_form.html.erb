@@ -1,0 +1,66 @@
+<%= form_for(@stadium) do |f| %>
+<%= render "shared/errors", object: @stadium %>
+<fieldset>
+  <ol>
+  <li>
+    <%= f.label :name %><br/>
+    <%= f.text_field :name, autofocus: true %>
+  </li>
+  <li>
+    <%= f.label :city %><br/>
+    <%= f.text_field :city %>
+  </li>
+  <li>
+    <%= f.label :state %><br/>
+    <%= f.text_field :state %>
+  </li><li>
+    <%= f.label :opening %><br/>
+    <%= f.date_field :opening %>
+  </li>
+  <li>
+    <%= f.label :centerfieldft %><br/>
+    <%= f.number_field :centerfieldft %>
+  </li>
+  <li>
+    <%= f.label :teamname %><br/>
+    <%= f.text_field :teamname %>
+  </li>
+  <li>
+    <%= f.label :capacity %><br/>
+    <%= f.text_field :capacity %>
+  </li>
+  <li>
+    <%= f.label :website %><br/>
+    <%= f.text_field :website %>
+  </li>
+
+
+ <li>
+    <%= f.label :closing %><br/>
+    <%= f.date_field :closing %>
+  </li>
+
+   <li>
+    <%= f.label :affiliate %><br/>
+    <%= f.text_field :affiliate %>
+  </li>
+
+   <li>
+    <%= f.label :league %><br/>
+    <%= f.text_field :league %>
+  </li>
+
+   <li>
+    <%= f.label :image_file_name %><br/>
+    <%= f.text_field :image_file_name %>
+  </li>
+
+
+</ol>
+
+  <p>
+    <%= f.submit %>  
+    <%= link_to "Cancel", stadiums_path, class: 'button' %>
+  </p>
+</fieldset>
+<% end %>
